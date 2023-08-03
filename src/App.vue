@@ -1,23 +1,39 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/shared/AppHeader.vue'
+import feather from 'feather-icons';
+
+//write props for appthem
+
+export default {
+  components: {
+    AppHeader,
+  },
+  data: () => {
+    return {
+      appTheme : 'bg-primary-night-dark'
+    }
+  
+  }
+  , 
+	mounted() {
+		feather.replace();
+	},
+	updated() {
+		feather.replace();
+	},
+  }
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+<div :class="appTheme" >
+  <AppHeader/>
+<router-view :theme="appTheme" />
+  
+</div>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
 
-  <RouterView />
 </template>
 
 <style scoped>

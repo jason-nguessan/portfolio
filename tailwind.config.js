@@ -23,7 +23,9 @@ module.exports = {
 				'ternary-dark': '#1E3851',
 				'sky-blue-light': '#87CEEB',
 				
-				'primary-night-dark': '#000000'
+				'primary-night-dark': '#1E1E1E'
+			//	'primary-night-dark': '#000000'
+
 
 			},
 			container: {

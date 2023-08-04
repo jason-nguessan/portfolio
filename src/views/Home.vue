@@ -1,106 +1,67 @@
 
 <script>
-import TopPartLeft from '../components/home/reusable/TopPartLeft.vue';
+import AboutMe from '../components/home/AboutMe.vue';
 export default {
     name: 'Home',
     components: {
-        TopPartLeft,
+        AboutMe,
     },
-    
-    data(){
-     return  {
-
-        canDo: ['Getting your business in front of clients', 'Architecting & Developing a Most Viable Product', 'Scaling your application software'],
-        colors: ['indigo-500', 'teal-300', 'teal-300'],
-        count : 0,
-        startLeftAnimation: true
-     } 
-       
-    },
-
-    mounted(){
-    
-    window.setInterval(()=>{
-  //    this.changeColor();
-      this.changeText()
-    }, 5000);
-
-  },
-    methods:{
-    
-    //     changeText(){
-
-    //         const first = this.canDo.shift()
-    //         this.canDo = this.canDo.concat(first)
-    //         console.log(first)
-    //     },
-       
-    changeColor() {
-            const first = this.colors.shift()
-            this.colors = this.colors.concat(first)
-    },
-
-    changeText(){
-      const first = this.canDo.shift()
-      this.canDo = this.canDo.concat(first)
-      this.count += 1
-      console.log(this.count)
-    }
-  },
   
-    
-    // data: () => {
-    //     return 
-    // }
-};
+}
 </script>
 <template>
-        
-        <div class="flex justify-center" >
-            <!-- Text Part  -->
-            <div class="w-9/12">
+<div>
+<AboutMe /> 
 
-              <Transition name="slide-fade" appear>
-                <div>
+<br> <br>
 
-       
-                <TopPartLeft left="Hi, my name is " middle="Jason" right="." /> 
-         <br>
-                <TopPartLeft  left="I am a " middle="Software Engineer" right="," /> 
-                <br>
+<div class="min-h-screen mt-5">
 
-                <TopPartLeft left="and most Importantly " middle="Tech Entrepreneur" right="." /> 
-                <br>
-                <br>
-              </div>
-              </Transition>
+          <!-- Title -->
 
-                    <TopPartLeft  :key=count  left="I can help with " :middle="canDo[0]"  overrideClassLeft="text-xl/12 font-general mt-1" overrideClassMiddle='text-xl/10 font-general-semibold mb-5 ml-2' right="." overrideClassRight="text-xl/10 font-general mt-1" /> 
+    
+  <div class="flex flex-col items-end">
+    <hr class="solid  w-1/6"> 
+<p 			class="font-general-medium text-xl/10 text-right font-medium text-ternary-light hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 ">
+
+Experience
+</p>
+  </div>
+
+  <br>
+  <div class="flex w-9/12 justify-center">
+
+<p class=" sm:text-xs/10 text-ternary-light font-general  lg:text-xl/10 mt-1"  style="" > Cloud Engineerdddddd </p>
+<!-- transition: none -->
+<transition name="slide-fade" mode="out-in" appear>
+
+<p  class="text-ternary-light  font-general-semibold  text-xl/10 mb-4 ml-4" style="" > @FinTech</p>
+</transition>
+
+<p class="text-ternary-light font-general  text-l/10 mt-2 ml-3"   style="" > Date</p>
+
+</div>
+
+<div class="flex justify-around">
+
+<p class=" sm:text-xs/10 text-ternary-light font-general  lg:text-xl/10 mt-1"  style="" > Cloud Engineeddddddddddrddddddddddd </p>
+<!-- transition: none -->
+<transition name="slide-fade" mode="out-in" appear>
+
+<p  class="text-ternary-light  font-general-semibold  text-xl/10 mb-4 ml-4" style="" > @FinTech</p>
+</transition>
 
 
+<p class="text-ternary-light font-general  text-l/10 mt-2 ml-auto"   style="" > Date</p>
 
+</div>
 
-                <!-- <p class="text-ternary-light text-xl/10 font-general mt-1" style="" >I can help with</p>
+ 
+  
 
-       
-                <p class="text-ternary-light text-2xl/10 font-general-semibold mb-5 ml-2" style="" >Getting your business in front of clients</p>
-                <p class="text-ternary-light text-xl/10 font-general mt-1" style="" >.</p> -->
-
-      
-
-
-            
-
-            </div>
-            <div>
-              <div id="avatar"></div>
-
-            <h1 class="text-ternary-light" style= "" >Profile</h1>
-
-            </div>
-        </div>
-        
-        <!-- AboutMe  -->
+</div>
+</div>
+ 
 
         <!-- Experience -->
 
@@ -111,13 +72,20 @@ export default {
 		
 </template>
 <style scoped>
+
+hr.solid {
+  border-top: 0.01em solid #434343;
+
+}
+
+
 #avatar {
     /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
-    background-image: url('https://i.stack.imgur.com/Dj7eP.jpg');
+    background-image: url('./src/assets/photos/me/portrait-bluewhite.jpg');
     
     /* make a square container */
-    width: 150px;
-    height: 150px;
+    width: 400px;
+    height: 600px;
 
     /* fill the container, preserving aspect ratio, and cropping to fit */
     background-size: cover;
@@ -125,8 +93,8 @@ export default {
     /* center the image vertically and horizontally */
     background-position: top center;
 
-    /* round the edges to a circle with border radius 1/2 container size */
-    border-radius: 50%;
+    border-radius: 10%;
+
 }
 .slide-fade-enter-active {
   transition: all 0.10s ease-out ;
@@ -142,19 +110,4 @@ export default {
   opacity: 0;
 }
 
-.yellow {
-  color: yellow;
-}
-
-.green {
-  color:green;
-}
-
-.red {
-  color: red;
-}
-
-/* div {
-    background-image: url(../assets/silver-star-confetti-on-black-background-vector-27862280.jpg);
-} */
 </style>

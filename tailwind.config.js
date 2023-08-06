@@ -15,7 +15,7 @@ module.exports = {
 		extend: {
 			colors: {
 				'primary-light': '#F7F8FC',
-				'secondary-light': '#FFFFFF',
+				'secondary-light': '#9CA3AF',
 				'ternary-light': '#f6f7f8',
 
 				'primary-dark': '#0D2438',
@@ -24,6 +24,7 @@ module.exports = {
 				'sky-blue-light': '#87CEEB',
 				
 				'primary-night-dark': '#1E1E1E'
+				
 			//	'primary-night-dark': '#000000'
 
 

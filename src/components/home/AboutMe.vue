@@ -39,7 +39,7 @@ export default{
 
 <template>
        
-       <div class="flex flex-col items-center" >
+       <div class="flex flex-col " >
             <!-- Text Part  -->
             <div class="flex w-10/12 justify-between">
 
@@ -64,7 +64,7 @@ export default{
 
             </div>
             
-            <div class="w-10/12">
+            <div class="w-11/12">
 
             <TopPartLeft  class="" :key=count  left="I can help with " :middle="canDo[0]"  overrideClassLeft="font-general ml-2" overrideClassMiddle='text-l/10 font-general-semibold ml-2' right="." overrideClassRight=" font-general mt-1" /> 
             </div>

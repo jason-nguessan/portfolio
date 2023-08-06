@@ -1,65 +1,28 @@
 
 <script>
 import AboutMe from '../components/home/AboutMe.vue';
+import Experience from '../components/home/Experience.vue';
+import Ventures from '../components/home/Ventures.vue';
+
 export default {
     name: 'Home',
     components: {
         AboutMe,
+        Experience,
+        Ventures
+        
     },
   
 }
 </script>
 <template>
-<div>
-<AboutMe /> 
-
-<br> <br>
-
-<div class="min-h-screen mt-5">
-
-          <!-- Title -->
-
-    
-  <div class="flex flex-col items-end">
-    <hr class="solid  w-1/6"> 
-<p 			class="font-general-medium text-xl/10 text-right font-medium text-ternary-light hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 ">
-
-Experience
-</p>
-  </div>
-
-  <br>
-  <div class="flex w-9/12 justify-center">
-
-<p class=" sm:text-xs/10 text-ternary-light font-general  lg:text-xl/10 mt-1"  style="" > Cloud Engineerdddddd </p>
-<!-- transition: none -->
-<transition name="slide-fade" mode="out-in" appear>
-
-<p  class="text-ternary-light  font-general-semibold  text-xl/10 mb-4 ml-4" style="" > @FinTech</p>
-</transition>
-
-<p class="text-ternary-light font-general  text-l/10 mt-2 ml-3"   style="" > Date</p>
-
-</div>
-
-<div class="flex justify-around">
-
-<p class=" sm:text-xs/10 text-ternary-light font-general  lg:text-xl/10 mt-1"  style="" > Cloud Engineeddddddddddrddddddddddd </p>
-<!-- transition: none -->
-<transition name="slide-fade" mode="out-in" appear>
-
-<p  class="text-ternary-light  font-general-semibold  text-xl/10 mb-4 ml-4" style="" > @FinTech</p>
-</transition>
-
-
-<p class="text-ternary-light font-general  text-l/10 mt-2 ml-auto"   style="" > Date</p>
-
-</div>
-
- 
+<div class="sm:ml-20 sm:mr-4">
   
+<AboutMe class="sm:ml-20 sm:mr-4" />
+<Experience  class="min-h-screen mt-5"  />
+<Ventures  class="min-h-screen mt-5"  />
 
-</div>
+
 </div>
  
 
@@ -73,10 +36,7 @@ Experience
 </template>
 <style scoped>
 
-hr.solid {
-  border-top: 0.01em solid #434343;
 
-}
 
 
 #avatar {

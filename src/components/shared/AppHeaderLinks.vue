@@ -26,13 +26,18 @@ export default {
 		>
 
 		<router-link
-			to="/businesses"
+			to="/Ventures"
 			class="font-general-medium block text-left text-lg font-medium text-ternary-light hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 "
 			aria-label="experience"
-			>Businesses</router-link
+			>Ventures</router-link
 		>
 
-
+		<router-link
+			to="/community"
+			class="font-general-medium block text-left text-lg font-medium text-ternary-light hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 "
+			aria-label="community"
+			>Community</router-link
+		>
 		<router-link
 			to="/qualifications"
 			class="font-general-medium block text-left text-lg font-medium text-ternary-light hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 "

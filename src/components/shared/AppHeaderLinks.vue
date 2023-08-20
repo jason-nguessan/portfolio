@@ -58,6 +58,14 @@ v-scroll-to="'#Experiences'"
 			</router-link
 		>
 
+		
+		<router-link
+			to="#"
+			aria-label="Get in Touch"
+			v-scroll-to="'#GetInTouch'"			>
+			<MenuTopRightTitle title="- Get In Touch"  :showHr="false"   /> 
+			</router-link
+		>
 
 	
 	

@@ -72,7 +72,7 @@ export default {
 				class="hidden sm:flex    justify-between flex-col md:flex-row"
 			>
 				<!-- Hire me button -->
-				<div class="w-full px-5  ">
+				<div id="GetInTouch" class="w-full px-5  ">
 					<Button
 						title="Get in Touch"
 						class=" text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md w-full px-5 py-2.5 duration-300"

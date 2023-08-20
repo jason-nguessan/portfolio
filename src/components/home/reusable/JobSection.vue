@@ -8,13 +8,20 @@ export default {
         rightTopPart: String,
         description: String,
         rightTopPartHref: String,
+        applyPadding: {
+            default: "mt-8",
+            type: String
+        },
         bulletPoints: {
             text: String,
             href: String,
         }
      
         
+    },
+    mounted() {
     }
+
     
 
 }
@@ -25,7 +32,7 @@ export default {
 
 
 
-<div class="flex flex-col justify-around ml">
+<div :class="'flex flex-col justify-around ' +  applyPadding " >
 
 
 <div class="flex ">
@@ -43,9 +50,8 @@ export default {
 
 </div>
 
-<br>
 
-<p 	class="font-general-regular text-ternary-light dark:text-ternary-light mx-8">
+<p 	class="font-general-regular text-ternary-light dark:text-ternary-light mx-8 ">
     {{ description }}
   </p>
   
@@ -76,13 +82,13 @@ export default {
 
 
 
-  -->
 
 
   
 		
           
 				</ul>
+
                 </div>
             
   

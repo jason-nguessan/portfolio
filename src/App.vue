@@ -1,6 +1,6 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
-import AppHeader from './components/shared/AppHeader.vue'
+import AppHeader from './components/shared/AppFooter.vue'
 import feather from 'feather-icons';
 
 //write props for appthem
@@ -28,8 +28,9 @@ export default {
 <template>
 
 <div :class="appTheme" >
-  <AppHeader/>
 <router-view :theme="appTheme" />
+  <AppHeader/>
+
   
 </div>
 

@@ -1,13 +1,13 @@
 <script>
-import AppHeaderLinks from './AppHeaderLinks.vue';
 import Button from '../reusable/Button.vue';
 import HireMeModal from '../HireMeModal.vue';
+import MenuTopRightTitle from '../../components/home/reusable/MenuTopRightTitle.vue';
 
 export default {
     components: {
-        AppHeaderLinks,
         HireMeModal,
-        Button
+        Button,
+		MenuTopRightTitle
     },
     methods : {
       showModal() {
@@ -59,28 +59,23 @@ export default {
 </script>
 <template>
   
-<nav id="nav" class="sm:container sm:mx-auto">
-    <div class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6">
+    <div class="z-10  mt-5">
      
-     
+		<MenuTopRightTitle  class="" title="Get in Touch"  /> 
+
 		
-        <div class="flex justify-between items-center px-4 sm:px-0">
-	
-        </div>
-		<img src="@/assets/rocket.png"
-		class="w-20 ">
+       
       
 	
-      <AppHeaderLinks class='md:gap-8'  :isOpen="isOpen" :showModal="showModal" ></AppHeaderLinks>
 
       <div
-				class="hidden sm:flex justify-between flex-col md:flex-row"
+				class="hidden sm:flex    justify-between flex-col md:flex-row"
 			>
 				<!-- Hire me button -->
-				<div class="hidden md:block">
+				<div class="w-full px-5  ">
 					<Button
 						title="Get in Touch"
-						class="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
+						class=" text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md w-full px-5 py-2.5 duration-300"
 						@click="showModal()"
 						aria-label="Get in Touch"
 					/>
@@ -100,7 +95,6 @@ export default {
     </div>
 
 
-</nav>
 
 </template>
 

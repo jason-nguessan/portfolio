@@ -70,8 +70,9 @@ export default{
 </script>
 
 <template>
-    <div>
-        <MenuTopRightTitle title="Ventures" /> 
+    <div class="flex  flex-col lg:center-screen relative">
+        
+        <MenuTopRightTitle class="top-0 right-0 w-full absolute" title="Ventures" /> 
         <div
 			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  w-11.5/12 mr-20 "
 		>

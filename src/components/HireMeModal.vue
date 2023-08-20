@@ -38,15 +38,15 @@ export default {
 						class="modal-wrapper flex items-center z-30"
 					>
 						<div
-							class="modal max-w-md mx-5 md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative"
+							class="modal max-w-md mx-5 md:max-w-xl bg-primary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative"
 						>
 							<div
-								class="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark"
+								class="modal-header flex justify-between gap-44 p-5 border-b border-ternary-light dark:border-ternary-dark"
 							>
 								<h5
 									class="text-primary-dark dark:text-primary-light text-xl"
 								>
-									What project are you looking for?
+									How can I help?
 								</h5>
 								<button
 									class="px-4 text-primary-dark dark:text-primary-light"
@@ -58,7 +58,7 @@ export default {
 							<div class="modal-body p-5 w-full h-full">
 								<form class="max-w-xl m-4 text-left">
 									<FormInput
-										label="Full Name"
+										label="Name"
 										inputIdentifier="name"
 										class="mb-2"
 									/>
@@ -69,11 +69,8 @@ export default {
 									/>
 
 									<div class="mt-6 mb-4">
-										<label
-											class="block mb-2 text-lg text-primary-dark dark:text-primary-light"
-											for="project"
-											>Project Type</label
-										>
+									
+										
 										<!-- <select
 											class="w-full px-5 py-3 border-1 border-gray-200 dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
 											id="project"
@@ -98,9 +95,9 @@ export default {
 										textareaIdentifier="details"
 									/>
 
-									<div class="mt-7 pb-4 sm:pb-1">
+									<div class="mt-7 pb-4 sm:pb-1 flex justify-center">
 										<Button
-											title="Send Request"
+											title="Send"
 											class="px-4 sm:px-6 py-2 sm:py-2.5 text-white bg-indigo-500 hover:bg-indigo-600 rounded-md focus:ring-1 focus:ring-indigo-900 duration-500"
 											type="submit"
 											aria-label="Submit Request"
@@ -108,16 +105,7 @@ export default {
 									</div>
 								</form>
 							</div>
-							<div
-								class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right"
-							>
-								<Button
-									title="Close"
-									class="px-4 sm:px-6 py-2 bg-gray-600 text-primary-light hover:bg-ternary-dark dark:bg-gray-200 dark:text-secondary-dark dark:hover:bg-primary-light rounded-md focus:ring-1 focus:ring-indigo-900 duration-500"
-									@click="showModal()"
-									aria-label="Close Modal"
-								/>
-							</div>
+				
 						</div>
 					</div>
 				</transition>

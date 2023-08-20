@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 
 const routes = [
+
 	{
 		path: '/',
 		name: 'Home',
@@ -9,7 +10,9 @@ const routes = [
 		meta: {
 			title: 'Stoman - Home',
 		},
+		
 	},
+
 	// {
 	// 	path: '/about',
 	// 	name: 'About',

@@ -16,6 +16,7 @@ export default{
                 leftTopPart: "Cloud Engineer",
                 rightTopPart: "@EDC - 2021-05 - present",
                 description: "Export Development Canada (EDC) is a Crown corporation dedicated to helping Canadian companies of all sizes succeed on the world stage. They focalize on equiping businesses with with the tools they need – the trade knowledge, financial solutions, equity, insurance, and connections – to grow their business with confidence. With a core requirement for sustainable software, my responsibilities were the following:",
+                applyPadding:  "mt-0",
                 bulletPoints: [
 
                     "Deploying web applications that would be able to widsthand high traffic, have 99.9% availibility, as well as block nefarious hacking attempts.",
@@ -87,9 +88,10 @@ export default{
 </script>
 
 <template>
-    <div>
-        <MenuTopRightTitle title="Experience"  /> 
-        <JobSection v-for="info in jobSection " :key="info.leftTopPart" :rightTopPartHref="info.rightTopPartHref"  :leftTopPart="info.leftTopPart"  :bulletPoints="info.bulletPoints" :description="info.description" :rightTopPart="info.rightTopPart"/> 
+    <div class="">
+        <MenuTopRightTitle  class="" title="Experiences"  /> 
+        <JobSection v-for="info in jobSection " :key="info.leftTopPart" :rightTopPartHref="info.rightTopPartHref"  :leftTopPart="info.leftTopPart"  :bulletPoints="info.bulletPoints" :description="info.description" :rightTopPart="info.rightTopPart" :applyPadding="info.applyPadding"/> 
+
     </div>
               
 </template>

@@ -3,24 +3,31 @@
 import AboutMe from '../components/home/AboutMe.vue';
 import Experience from '../components/home/Experience.vue';
 import Ventures from '../components/home/Ventures.vue';
+import Publications from '../components/home/Publications.vue';
+import Profile from '../components/home/Profile.vue';
+
 
 export default {
     name: 'Home',
     components: {
         AboutMe,
         Experience,
-        Ventures
+        Ventures,
+        Publications,
+        Profile,
         
     },
   
 }
 </script>
 <template>
-<div class="sm:ml-20 sm:mr-4">
-  
-<AboutMe class="sm:ml-20 sm:mr-4" />
-<Experience  class="min-h-screen mt-5"  />
-<Ventures  class="min-h-screen mt-5"  />
+<div class="sm:ml-20 sm:mr-4 mt-16 ">
+<AboutMe class="sm:ml-20 sm:mr-4 " />
+<Profile id="Profile" class="min-h-screen mt-5 sm:-ml-20  sm:-mr-4"  />
+<!-- <Ventures  id="Ventures" class="min-h-screen"  /> -->
+<Publications id="Publications" class="min-h-screen mt-5 sm:-ml-20  sm:-mr-4"  />
+<Experience  id="Experiences" class="min-h-screen mt-5"  />
+
 
 
 </div>
@@ -30,10 +37,25 @@ export default {
 
 		<!-- Businesses -->
         
-		<!-- Qualifications -->
+		<!-- Profile -->
 
 		
 </template>
+
+<style>
+
+.center-screen {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+
+
+</style>
+
 <style scoped>
 
 

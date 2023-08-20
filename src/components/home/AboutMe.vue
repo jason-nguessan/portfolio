@@ -1,8 +1,10 @@
 <script> 
 import TopPartLeft from '../../components/home/reusable/TopPartLeft.vue';
+import AppHeaderLinks from '../shared/AppHeaderLinks.vue';
 export default{
     components: {
         TopPartLeft,
+        AppHeaderLinks,
     },
        
     data(){
@@ -28,7 +30,6 @@ export default{
       const first = this.canDo.shift()
       this.canDo = this.canDo.concat(first)
       this.count += 1
-      console.log(this.count)
     }
   },
 
@@ -39,7 +40,10 @@ export default{
 
 <template>
        
-       <div class="flex flex-col " >
+       <div class="flex"> 
+
+
+        <div class="flex flex-col  sm:w-8/12 w-full mx-5" >
             <!-- Text Part  -->
             <div class="flex w-10/12 justify-between">
 
@@ -55,16 +59,18 @@ export default{
                 <TopPartLeft left="and most Importantly " middle="Tech Entrepreneur" right="." /> 
                 <br>
                 <br>
+                
+
+                <!-- <AppHeaderLinks  :isOpen="false" />  -->
               </div>
               </Transition>
 
-              <div id="avatar"></div>
 
       
 
             </div>
             
-            <div class="w-11/12">
+            <div class="w-11/12 relative ">
 
             <TopPartLeft  class="" :key=count  left="I can help with " :middle="canDo[0]"  overrideClassLeft="font-general ml-2" overrideClassMiddle='text-l/10 font-general-semibold ml-2' right="." overrideClassRight=" font-general mt-1" /> 
             </div>
@@ -81,6 +87,12 @@ export default{
 
 
             </div>
+            
+        <!-- <div class="justify-end " id="avatar"></div> -->
+              <AppHeaderLinks  :isOpen="false" />  
+
+       </div>
+      
               
 </template>
 
@@ -90,8 +102,8 @@ export default{
     background-image: url('./src/assets/photos/me/portrait-bluewhite.jpg');
     
     /* make a square container */
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 400px;
 
     /* fill the container, preserving aspect ratio, and cropping to fit */
     background-size: cover;

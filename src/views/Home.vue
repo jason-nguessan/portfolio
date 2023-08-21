@@ -22,11 +22,11 @@ export default {
 </script>
 <template>
 <div class="sm:ml-20 sm:mr-4 mt-16 ">
-<AboutMe class="sm:ml-20 sm:mr-4 " />
-<Profile id="Profile" class="min-h-screen mt-5 sm:-ml-20  sm:-mr-4"  />
+<!-- <AboutMe class="sm:ml-20 sm:mr-4 " /> -->
+<Profile id="Profile" class="min-h-screen mt-5 "  />
 <!-- <Ventures  id="Ventures" class="min-h-screen"  /> -->
-<Publications id="Publications" class="min-h-screen mt-5 sm:-ml-20  sm:-mr-4"  />
-<Experience  id="Experiences" class="min-h-screen mt-5"  />
+<!-- <Publications id="Publications" class="min-h-screen mt-5 sm:-ml-20  sm:-mr-4"  /> -->
+<!-- <Experience  id="Experiences" class="min-h-screen mt-5"  /> -->
 
 
 
@@ -43,13 +43,15 @@ export default {
 </template>
 
 <style>
-
+@responsive  {
 .center-screen {
   display: flex;
   justify-content: center;
   text-align: center;
   min-height: 100vh;
   min-width: 100vh;
+  background: blanchedalmond;
+}
 }
 
 

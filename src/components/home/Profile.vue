@@ -139,7 +139,7 @@ mounted ()  {
 
 <template>
 
-<div class="flex  flex-col center-screen relative">
+<div class="flex  flex-col sm:center-screen lg:center-screen relative">
 
 <MenuTopRightTitle class="mb-auto top-0 right-0 absolute " title="Profile"  /> 
 
@@ -147,11 +147,12 @@ mounted ()  {
 
 
 <div class=""> 
- <div class="flex flex-row  rounded-xl justify-around bg-indigo-200 w-auto my-5 mx-5 "> 
+ <div class="flex lg:flex-row flex-col  rounded-xl justify-around bg-indigo-200 sm:w-auto my-5 mx-5 w-fit "> 
 <!-- code -->
+
 <!-- code -->
 <div class="flex flex-col justify-around"> 
-
+  <p class="bg-white">hi</p>
 <ProfileBox  :list="leftVouchBoxEducation" /> 
 <ProfileBox  :list="leftVouchBoxCertification" /> 
 

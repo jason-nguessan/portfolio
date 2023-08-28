@@ -4,11 +4,25 @@
 import MenuTopRightTitle from './reusable/MenuTopRightTitle.vue';
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
-
 import feather from 'feather-icons';
+import quote22 from '@/assets/photos/quotes/quote22.png'
+import quote31 from '@/assets/photos/quotes/quote31.png'
+import quote11 from '@/assets/photos/quotes/quote11.png'
 
+import youtube from '@/assets/photos/work/youtube-vcity.jpg'
+import defhacks from '@/assets/photos/work/defhacks.png'
+import thirdplaceuniversityuog from '@/assets/photos/work/teaching-uoguelph.png'
 
+import edcbdc from '@/assets/photos/work/edc-bdc.jpeg'
+import hackinghealth from '@/assets/photos/work/hacking-health.jpeg'
 
+import techinguoguelph from '@/assets/photos/work/teaching-uoguelph.png'
+
+// src/assets/photos/work/youtube-vcity.jpg
+//       src/assets/photos/work/thirdplace-university-uog.png
+//       src/assets/photos/work/edc-bdc.jpeg
+//       src/assets/photos/work/hacking-health.jpeg
+//       src/assets/photos/work/teaching-uoguelph.png
 
 
 export default{
@@ -71,11 +85,11 @@ export default{
     this.events += `<strong>${eventName}</strong>, ${JSON.stringify(params)}<br>`
     console.log(this.events)
     console.log(eventName)
-    if(params.currentSlide.image == "src/assets/photos/quotes/quote22.png"){
+    if(params.currentSlide.image == quote22){
       this.slideRatio = "0.21"
     }
 
-  else  if(params.currentSlide.image == "src/assets/photos/quotes/quote31.png"){
+  else  if(params.currentSlide.image == quote31){
       this.slideRatio = "0.21"
     }
     else{
@@ -117,7 +131,7 @@ data: () => ({
       title: 'Chief Organizer - Def Hacks',
       href:"https://defhacks.co/hackathons/global_2.0.html",
       content: 'Hackathon Organizer, following 50k+ Prizes, 1k+ participants, as well as interesting speakers.',
-      image: "src/assets/photos/work/defhacks.png"
+      image:  defhacks
 
     },
 
@@ -125,7 +139,8 @@ data: () => ({
       title:  'Guest Speaker - V.City',
       href: "https://www.youtube.com/watch?v=FIyQiF5n7h0",
       content:  'Demystifying popular wide technical tool with tech influencer.',
-      image: "src/assets/photos/work/youtube-vcity.jpg"
+      image: youtube
+   
     },
  
     //
@@ -133,14 +148,14 @@ data: () => ({
       title: '3rd Place Winner - Agri Case study',
       href:"https://www.uoguelph.ca/lang/news/2020/03/students-collaborate-address-industry-challenges-agriculture",
       content: 'Proposed using anaerobic digestion to create higher quality compost for mushroom facilities.',
-      image: "src/assets/photos/work/thirdplace-university-uog.png"
+      image: thirdplaceuniversityuog
     },
 
     {
       title: 'Youth Entrepreneur Mentor - Banks',
       href:"https://sbs-spe.feddevontario.canada.ca/en/youth-entrepreneurship-guide",
       content: 'Bank wide initiative crossing over 5 major banks to guide youths in their ventures.',
-      image: "src/assets/photos/work/edc-bdc.jpeg"
+      image: edcbdc
     },
 
  
@@ -148,13 +163,13 @@ data: () => ({
       title: '4th Place Winner - Hacking Health',
       href: "https://hacking-health.org",
       content: 'Solution that would fight against violence in health care centres.',
-      image: "src/assets/photos/work/hacking-health.jpeg"
+      image: hackinghealth
     },
     {
       title: 'Cloud Intro - University',
       href:"https://www.uoguelph.ca",
       content: 'Theoretical, and hands-on session of Cloud Computing.',
-      image: "src/assets/photos/work/teaching-uoguelph.png"
+      image: techinguoguelph
     },
   
   
@@ -169,18 +184,18 @@ slidesVueper: [
 {
 
 // You can also provide a URL for the image.
-image: ('src/assets/photos/quotes/quote11.png')
+image: quote11
 },
 
 {
 
 // You can also provide a URL for the image.
-image: ('src/assets/photos/quotes/quote31.png')
+image: quote31
 },
 
 {
 // You can also provide a URL for the image.
-image: ('src/assets/photos/quotes/quote22.png')
+image: quote22
 },
 
 

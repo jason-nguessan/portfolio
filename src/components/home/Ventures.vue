@@ -1,6 +1,10 @@
 <script> 
 import MenuTopRightTitle from '../../components/home/reusable/MenuTopRightTitle.vue';
 import ProjectSingle from '../../components/home/reusable/ProjectSingle.vue';
+import Img_Prepn from '@/assets/photos/work/prepn-showcase.jpg'
+import Img_Buddy from '@/assets/photos/work/mybuddymascot.png'
+import Img_Lyricify from '@/assets/photos/work/lyricify.png'
+
 
 export default{
     name: "Ventures",
@@ -16,7 +20,7 @@ export default{
                 id: 0,
 		title: 'Lyricify',
 		category: 'An AI powered platform that allows casual users to translate their favourite songs into lyrics. ',
-		img: ('src/assets/photos/work/lyricify.png'),
+		img: Img_Lyricify,
             status: "In Progress"
                  },
              proj1 : {
@@ -24,7 +28,7 @@ export default{
 		title: 'MyBuddy',
 		category: 'An app that would allow strangers to meet online.',
         //Peaked at over 50 users, and 1 thousand comments on instagram, the business taught me how to leverage digital marketing to drive clientelle. It is up for sale.
-		img: ('src/assets/photos/work/mybuddymascot.png'),
+		img:  Img_Buddy,
         href: "https://jason-nguessan.github.io/MyBuddyWeb/",
         status: "For Sale"
 
@@ -47,7 +51,8 @@ export default{
                 id: 2,
 		title: 'Prepn',
 		category: 'A simple meal kit app for school campuses made during the infancy of the grocery delivery boom.',
-		img: ('src/assets/photos/work/prepn-showcase.jpg'),
+		img: Img_Prepn,
+        
         href: null,
         status: "Discontinued"
 

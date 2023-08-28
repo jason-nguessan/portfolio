@@ -206,7 +206,8 @@ mounted ()  {
 
 #avatar1 {
     /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
-    background-image: url('./src/assets/photos/me/portraitredwhite.jpg');
+    background-image: url('@/assets/photos/me/portraitredwhite.jpg');
+
       background-size: cover;
 }
 </style>

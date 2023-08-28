@@ -31,6 +31,7 @@ export default{
       this.canDo = this.canDo.concat(first)
       this.count += 1
     }
+    
   },
 
 }
@@ -43,9 +44,9 @@ export default{
        <div class="flex"> 
 
 
-        <div class="flex flex-col  sm:w-8/12 w-full mx-5" >
+        <div class="flex flex-col  sm:w-8/12 w-full mx-0" >
             <!-- Text Part  -->
-            <div class="flex w-10/12 justify-between">
+            <div class="flex sm:w-10/12 w-full justify-between">
 
               <Transition name="slide-fade" appear>
                 <div>
@@ -70,7 +71,7 @@ export default{
 
             </div>
             
-            <div class="w-11/12 relative ">
+            <div class="sm:w-11/12 relative ">
 
             <TopPartLeft  class="" :key=count  left="I can help with " :middle="canDo[0]"  overrideClassLeft="font-general ml-2" overrideClassMiddle='text-l/10 font-general-semibold ml-2' right="." overrideClassRight=" font-general mt-1" /> 
             </div>
@@ -89,7 +90,7 @@ export default{
             </div>
             
         <!-- <div class="justify-end " id="avatar"></div> -->
-              <AppHeaderLinks  :isOpen="false" />  
+              <AppHeaderLinks   :isOpen="false"  :showDash="true" />  
 
        </div>
       
@@ -97,23 +98,7 @@ export default{
 </template>
 
 <style scoped>
-#avatar {
-    /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
-    background-image: url('./src/assets/photos/me/portrait-bluewhite.jpg');
-    
-    /* make a square container */
-    width: 300px;
-    height: 400px;
 
-    /* fill the container, preserving aspect ratio, and cropping to fit */
-    background-size: cover;
-
-    /* center the image vertically and horizontally */
-    background-position: top center;
-
-    border-radius: 10%;
-
-}
 .slide-fade-enter-active {
   transition: all 0.10s ease-out ;
 }

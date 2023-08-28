@@ -1,6 +1,8 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
-import AppHeader from './components/shared/AppFooter.vue'
+import AppFooter from './components/shared/AppFooter.vue'
+import AppHeader from './components/shared/AppHeader.vue'
+
 import feather from 'feather-icons';
 
 //write props for appthem
@@ -8,10 +10,11 @@ import feather from 'feather-icons';
 export default {
   components: {
     AppHeader,
+    AppFooter
   },
   data: () => {
     return {
-      appTheme : 'bg-primary-night-dark'
+      appTheme : 'bg-primary-night-dark '
     }
   
   }
@@ -27,12 +30,17 @@ export default {
 
 <template>
 
-<div :class="appTheme" >
+
+<div :class="appTheme + ' '" >
+  <AppHeader /> 
 <router-view :theme="appTheme" />
-  <AppHeader/>
+<AppFooter />
+
+
+
+ </div>
 
   
-</div>
 
 
 </template>

@@ -1,13 +1,10 @@
 <script>
-import ThemeSwitcher from '../ThemeSwitcher';
 import feather from 'feather-icons';
 import AppHeaderLinks from './AppHeaderLinks.vue';
 import Button from '../reusable/Button.vue';
 
 export default {
 	components: {
-		ThemeSwitcher,
-		HireMeModal,
 		AppHeaderLinks,
 		Button,
 	},
@@ -16,6 +13,8 @@ export default {
 			isOpen: false,
 			theme: '',
 			modal: false,
+			count : 0,
+
 			categories: [
 				{
 					id: 1,
@@ -49,6 +48,7 @@ export default {
 		this.theme = localStorage.getItem('theme') || 'light';
 	},
 	methods: {
+
 		updateTheme(theme) {
 			this.theme = theme;
 		},
@@ -66,6 +66,21 @@ export default {
 				this.modal = true;
 			}
 		},
+		open(){
+			this.isOpen = !this.isOpen
+			const home = document.querySelector('#home')
+			this.count += 1
+
+			if(this.isOpen == true){
+				console.log(home.classList)
+				home.classList.add("blur-sm")
+			}
+			else{
+
+				home.classList.remove("blur-sm")
+
+			}
+		}
 	},
 	updated() {
 		feather.replace();
@@ -74,50 +89,39 @@ export default {
 </script>
 
 <template>
-	<nav id="nav" class="lg:container lg:mx-auto">
-		<!-- Header start -->
+
+	<nav id="nav" class=" sm:hidden  sm:container sm:mx-auto  ">
+
 		<div
-			class="z-10 max-w-screen-lg xl:max-w-screen-xl block lg:flex lg:justify-between lg:items-center my-6"
+		v-show="isOpen"
+				@click="open"
+				class="bg-filter v-5 bg-black bg-opacity-50 fixed inset-0 w-full h-full z-50"
+			></div>
+		
+		<!-- Header start -->
+
+		<div
+			class=" z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6"
 		>
 			<!-- Header menu links and small screen hamburger menu -->
-			<div class="flex justify-between items-center px-4 lg:px-0">
+			<div class="flex justify-between items-center px-4 sm:px-0">
 				<!-- Header logos -->
 				<div>
-					<router-link to="/"
-						><img
-							v-if="theme === 'light'"
-							src="@/assets/images/logo-dark.svg"
-							class="w-36"
-							alt="Dark Logo"
-						/>
-						<img
-							v-else
-							src="@/assets/images/logo-light.svg"
-							class="w-36"
-							alt="Light Logo"
-						/>
-					</router-link>
+					
 				</div>
-
-				<!-- Theme switcher small screen -->
-				<theme-switcher
-					:theme="theme"
-					@themeChanged="updateTheme"
-					class="block lg:hidden bg-ternary-light dark:bg-ternary-dark hover:bg-hover-light dark:hover:bg-hover-dark hover:shadow-sm px-2.5 py-2 rounded-lg"
-				/>
-
+				
 				<!-- Small screen hamburger menu -->
-				<div class="lg:hidden">
+				<div class="sm:hidden">
 					<button
-						@click="isOpen = !isOpen"
+						@click=open 
 						type="button"
-						class="focus:outline-none"
+						class="focus:outline-none "
 						aria-label="Hamburger Menu"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
-							class="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light"
+							class="h-7 w-7 fill-current text-primary-light"
 						>
 							<path
 								v-if="isOpen"
@@ -136,23 +140,45 @@ export default {
 			</div>
 
 			<!-- Header links -->
-			<AppHeaderLinks :showModal="showModal" :isOpen="isOpen" />
+			<Transition name="slide-fade" appear :key="count">
+
+			<AppHeaderLinks  class=" absolute z-50 top-11 right-10 justify-center items-center w-full max-w-xs bg-primary-night-dark rounded-lg shadow-lg p-6" :showModal="false" :isOpen="isOpen" />
+		</Transition>
 
 			<!-- Header right section buttons -->
-			
 		</div>
 
-		<!-- Hire me modal -->
-		<HireMeModal
-			:showModal="showModal"
-			:modal="modal"
-			:categories="categories"
-			aria-modal="Hire Me Modal"
-		/>
+
+	
 	</nav>
 </template>
 
 <style scoped>
+
+
+
+.slide-fade-enter-active {
+	animation: fade-in 0.4s;
+}
+
+.slide-fade-leave-active {
+	animation: fade-in 0.2s reverse;
+
+	/* transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1); */
+
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
 #nav a.router-link-exact-active {
 	@apply text-indigo-700;
 	@apply dark:text-indigo-400;

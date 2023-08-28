@@ -27,12 +27,12 @@ export default {
 
 
 
-<p class="text-2xl font-general-semibold text-ternary-dark dark:text-ternary-light font-semibold">{{ list.title }}</p>
+<p class="sm:text-2xl text-3xl font-general-semibold text-start  text-ternary-dark dark:text-ternary-light font-semibold">{{ list.title }}</p>
 
 
-<ul class="list-item ">
+<ul class="list-item  ">
 
-<li class="text-lg font-general-medium text-ternary-dark dark:text-ternary-light font-semibold mx-3"  v-for="li in list.li" :key="li">- {{ li.text }}</li>
+<li class="sm:text-lg text-xl font-general-medium text-start text-ternary-dark dark:text-ternary-light font-semibold mx-3"  v-for="li in list.li" :key="li">- {{ li.text }}</li>
 </ul>
 
 </div>

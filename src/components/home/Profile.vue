@@ -139,20 +139,26 @@ mounted ()  {
 
 <template>
 
-<div class="flex  flex-col sm:center-screen lg:center-screen relative">
+<div class="flex  flex-col justify-center lg:center-screen  lg:relative">
 
-<MenuTopRightTitle class="mb-auto top-0 right-0 absolute " title="Profile"  /> 
+  
+<MenuTopRightTitle class="mb-auto lg:top-0 lg:right-0 lg:absolute " title="Profile"  /> 
 
 <!-- class="mt-20 autoplay :duration="30000" " -->
+<!-- <p class="bg-white">hi</p> -->
+
+<div class="lg:inner-spacing"> 
+
 
 
 <div class=""> 
- <div class="flex lg:flex-row flex-col  rounded-xl justify-around bg-indigo-200 sm:w-auto my-5 mx-5 w-fit "> 
+ <!-- <div class="flex sm:flex-row flex-col  rounded-xl justify-around bg-indigo-200 sm:w-auto my-5 mx-5 w-fit ">  -->
+  <div class="flex lg:flex-row flex-col   rounded-xl justify-around bg-indigo-200 lg:w-auto    "> 
+
 <!-- code -->
 
 <!-- code -->
 <div class="flex flex-col justify-around"> 
-  <p class="bg-white">hi</p>
 <ProfileBox  :list="leftVouchBoxEducation" /> 
 <ProfileBox  :list="leftVouchBoxCertification" /> 
 
@@ -164,7 +170,7 @@ mounted ()  {
 
 
 
-  <div class="sm:h-96 sm:w-80 h-52 w-60 bg-cover shadow-2xl z-40  rounded-xl my-5" style=" background-position-y: 35%;
+  <div class="lg:h-96 lg:w-80 h-72 w-60 bg-cover shadow-2xl z-40  rounded-xl my-5" style=" background-position-y: 35%;
     border-radius: 55%;" id="avatar1"></div>
 
 
@@ -189,19 +195,15 @@ mounted ()  {
 
 </div>
 </div>
+</div>
+
 
 </template>
 
 
 <style scoped>
 
-.center-screen {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  min-height: 100vh;
-  min-width: 100vh;
-}
+
 #avatar1 {
     /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
     background-image: url('./src/assets/photos/me/portraitredwhite.jpg');

@@ -89,9 +89,11 @@ export default{
 
 <template>
     <div class="">
-        <MenuTopRightTitle  class="" title="Experiences"  /> 
-        <JobSection v-for="info in jobSection " :key="info.leftTopPart" :rightTopPartHref="info.rightTopPartHref"  :leftTopPart="info.leftTopPart"  :bulletPoints="info.bulletPoints" :description="info.description" :rightTopPart="info.rightTopPart" :applyPadding="info.applyPadding"/> 
+        <MenuTopRightTitle class="mb-auto  lg:-mr-4" title="Experience" /> 
+        <div class="mx-5"> 
 
+        <JobSection v-for="info in jobSection " :key="info.leftTopPart" :rightTopPartHref="info.rightTopPartHref"  :leftTopPart="info.leftTopPart"  :bulletPoints="info.bulletPoints" :description="info.description" :rightTopPart="info.rightTopPart" :applyPadding="info.applyPadding"/> 
+</div>
     </div>
               
 </template>

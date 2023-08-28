@@ -69,7 +69,7 @@ export default {
 	
 
       <div
-				class="hidden sm:flex    justify-between flex-col md:flex-row"
+				class="sm:flex justify-between flex-col md:flex-row mb-5"
 			>
 				<!-- Hire me button -->
 				<div id="GetInTouch" class="w-full px-5  ">

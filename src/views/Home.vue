@@ -15,18 +15,26 @@ export default {
         Ventures,
         Publications,
         Profile,
+
         
     },
   
 }
 </script>
-<template>
-<div class="sm:ml-20 sm:mr-4 mt-16 ">
-<!-- <AboutMe class="sm:ml-20 sm:mr-4 " /> -->
-<Profile id="Profile" class="min-h-screen mt-5 "  />
-<!-- <Ventures  id="Ventures" class="min-h-screen"  /> -->
-<!-- <Publications id="Publications" class="min-h-screen mt-5 sm:-ml-20  sm:-mr-4"  /> -->
-<!-- <Experience  id="Experiences" class="min-h-screen mt-5"  /> -->
+<template >
+
+<!-- <div class="lg:ml-20 lg:mr-4 mt-16 " id="home"> -->
+
+
+    <div class="lg:ml-20 lg:mr-4 mt-16"  id="home">
+
+<AboutMe class="lg:ml-20 lg:mr-4 ml-5 lg:text-xl" />
+<Profile id="Profile" class="lg:min-h-screen  mt-5 lg:-ml-20 lg:-mr-0 "  />
+<Ventures  id="Ventures" class="lg:min-h-screen mt-5 lg:-ml-20  lg:-mr-0 "  />
+<Publications id="Publications" class="lg:min-h-screen mt-5 lg:-ml-20  lg:-mr-0"  />
+<Experience  id="Experiences" class=" mt-5  lg:-ml-20 lg:-mr-0"  />
+
+
 
 
 
@@ -43,16 +51,31 @@ export default {
 </template>
 
 <style>
-@responsive  {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
 .center-screen {
   display: flex;
   justify-content: center;
   text-align: center;
   min-height: 100vh;
   min-width: 100vh;
-  background: blanchedalmond;
 }
 }
+
+@layer components{
+.inner-spacing {
+  @apply lg:my-0  my-5 lg:mx-5 mx-10 ;
+
+}
+}
+
+
+/* <div class="lg:my-0 my-5 lg:mx-5 mx-10">  */
+
+
 
 
 

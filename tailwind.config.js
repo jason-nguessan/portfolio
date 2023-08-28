@@ -12,6 +12,8 @@ module.exports = {
 
 	darkMode: 'class',
 	theme: {
+
+		
 		extend: {
 			colors: {
 				'primary-light': '#F7F8FC',
@@ -29,6 +31,9 @@ module.exports = {
 
 
 			},
+		
+			
+			
 			container: {
 				padding: {
 					DEFAULT: '1rem',

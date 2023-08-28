@@ -30,7 +30,7 @@ export default {
 			></div>
 			<!-- Modal content -->
 			<main
-				class="flex flex-col items-center justify-center h-full w-full"
+				class="flex flex-col sm:items-center sm:justify-center sm:my-0 my-2 h-full w-full"
 			>
 				<transition name="fade-up-down">
 					<div
@@ -41,7 +41,7 @@ export default {
 							class="modal max-w-md mx-5 md:max-w-xl bg-primary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative"
 						>
 							<div
-								class="modal-header flex justify-between gap-44 p-5 border-b border-ternary-light dark:border-ternary-dark"
+								class="modal-header flex justify-between sm:gap-44 p-5 border-b border-ternary-light dark:border-ternary-dark"
 							>
 								<h5
 									class="text-primary-dark dark:text-primary-light text-xl"
@@ -55,7 +55,7 @@ export default {
 									<i data-feather="x"></i>
 								</button>
 							</div>
-							<div class="modal-body p-5 w-full h-full">
+							<div class="sm:modal-body p-5 w-full h-full">
 								<form class="max-w-xl m-4 text-left">
 									<FormInput
 										label="Name"

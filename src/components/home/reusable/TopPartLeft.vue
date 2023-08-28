@@ -27,11 +27,11 @@ export default {
 
 <div class="flex ">
 
-<p class=" sm:text-xs/10 text-ternary-light font-general  lg:text-xl/10 mt-1"  :class="overrideClassLeft" style="" > {{ left }} </p>
+<p class="  sm:text-xl/10 text-ternary-light font-general  text-lg/10 mt-1"  :class="overrideClassLeft" style="" > {{ left }} </p>
 <!-- transition: none -->
 <transition name="slide-fade" mode="out-in" appear  :style=animate >
 
-<p  class="text-ternary-light  font-general-semibold  text-xl/10 mb-4 ml-4"  :class="overrideClassMiddle"  style="" > {{ middle }}</p>
+<p  class="text-ternary-light  font-general-semibold  sm:text-2xl/10 text-xl/10 mb-4 ml-4"  :class="overrideClassMiddle"  style="" > {{ middle }}</p>
 </transition>
 
 <p class="text-ternary-light font-general  text-l/10 mt-2 ml-3"  :class="overrideClassRight"  style="" > {{ right }}</p>

@@ -8,16 +8,30 @@ export default {
         
     
     },
+	props: {
+		isOpen: {
+			type: Boolean,
+			default: false
+		},
+		showDash: {
+			type: Boolean,
+			default: false
+		},
+		showModal: {
+			type: Boolean,
+			default: false
+		},
+		
+	}
 
-	props: ['showModal', 'isOpen', 'showDash'],
 };
 </script>
 
 <template>
 	<!-- Header links -->
 	<div
-		:class="isOpen ? 'block' : 'hidden'"
-		class="m-0 sm:ml-4 sm:flex p-5 flex-col sm:p-0 justify-center items-start shadow-lg sm:shadow-none"
+		v-show="isOpen == true"
+		class=" right-10   m-0 sm:ml-4 sm:flex p-10 flex-col sm:p-0 justify-center items-center shadow-lg sm:shadow-none"
 	>
 
 	
@@ -25,9 +39,8 @@ export default {
 			to="#"
 			aria-label="Profile"
 			v-scroll-to="'#Profile'"
-
 			>
-			<MenuTopRightTitle  :position="showDash == true ? 'end' : 'start' " :title="(showDash == true ? '-' : '') +  ' Profile'"   :showHr="false"  /> 
+			<MenuTopRightTitle class=""  :position="showDash == true ? 'end' : 'start' " :title="(showDash == true ? '-' : '') +  ' Profile'"   :showHr="false"  /> 
 			</router-link
 		>
 

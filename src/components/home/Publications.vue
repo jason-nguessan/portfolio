@@ -198,10 +198,10 @@ image: ('src/assets/photos/quotes/quote22.png')
     
     <div class="flex flex-col ">
       <MenuTopRightTitle title="Publications"  /> 
+      
+      <div class="flex sm:flex-row mt-0 flex-col justify-center items-center">
+
     
-      <div class="flex justify-center items-center p-5 ">
-
-
     <div class="slider sm:w-1/2 w-full">
 
     
@@ -210,6 +210,7 @@ image: ('src/assets/photos/quotes/quote22.png')
         <img
           :src=slide.image
           alt=""
+          class="object-contain"
         />
 
       </div>
@@ -221,21 +222,43 @@ image: ('src/assets/photos/quotes/quote22.png')
 
     <div class="flex flex-col items-center justify-between sm:w-1/2 w-full">
 
+      <div class="md:hidden flex sm:justify-center  sm:w-12/12 sm:p-5 sm:mt-5 mb-5">
+     <!-- Control buttons -->
+     <button @click="updateSlides(true)" class="btn btn-prev mr-20" >
       
-      <p class="font-general-semibold text-ternary-light dark:text-ternary-light text-4xl  mx-8 mt-8">
+      <i
+						data-feather="arrow-left"
+						class="duration-100"
+					></i>
+      
+    </button>
+     
+     <button  
+     @click="updateSlides(false)"
+     class="btn btn-next"> 	<i
+						data-feather="arrow-right"
+						class="duration-100 "
+					></i> </button>
+
+
+   
+    </div>
+   
+      
+      <p class="font-general-semibold text-ternary-light dark:text-ternary-light sm:text-4xl md:text-2xl text-xl  sm:mx-8 mx-0 mt-8">
          {{ slides[currSlideIndex].title }}
       
 </p>
 
 
-<span info.href  class="font-general-regular bg-center justify-center text-ternary-light text-center text-3xl  leading-loose dark:text-ternary-light mx-8 my-auto cursor-pointer hover:text-indigo-300"  >
+<span info.href  class="font-general-regular bg-center justify-center text-ternary-light text-center sm:text-3xl md:text-xl text-lg  leading-loose dark:text-ternary-light mx-8 my-auto cursor-pointer hover:text-indigo-300"  >
                             <a :href=slides[currSlideIndex].href target="_blank" > {{ slides[currSlideIndex].content }}</a>
                         </span>
 
 
   
 
-<p class="font-general-regular bg-center justify-center text-ternary-light text-center text-2xl  leading-loose dark:text-ternary-light mx-8 my-auto">
+<p class="font-general-regular bg-center justify-center text-ternary-light text-center text-2xl md:text-lg  leading-loose dark:text-ternary-light mx-8 my-auto">
          {{ currSlideIndex + 1}} / {{ slides.length  }}
        
 
@@ -255,7 +278,7 @@ image: ('src/assets/photos/quotes/quote22.png')
 
     
     </div>
-    <div class="flex justify-center w-12/12 p-5 ">
+    <div class="hidden md:flex md:justify-center md:w-12/12 md:p-5 ">
      <!-- Control buttons -->
      <button @click="updateSlides(true)" class="btn btn-prev mr-20" >
       
@@ -282,7 +305,12 @@ image: ('src/assets/photos/quotes/quote22.png')
     <hr class=" solid items-end solid  w-3/12 " > 
 </div>
 
-    <vueper-slides   :arrows="false" fractions progress :bulletsOutside="true" :touchable="false"  :slide-ratio=slideRatio 
+<!-- Hide only on small screens -->
+  <div class="hidden sm:inline" > 
+
+
+
+    <vueper-slides  :arrows="false" :fractions="true" progress :bulletsOutside="true" :touchable="false"  :slide-ratio=slideRatio 
 
 @ready="logEvents('ready', $event)"
  @previous="logEvents('previous', $event)"
@@ -294,10 +322,59 @@ image: ('src/assets/photos/quotes/quote22.png')
 <vueper-slide v-for="(slide, i) in slidesVueper"
    :key="i"
    :image="slide.image"
+  
+
+
+   
    >
  </vueper-slide>
  </vueper-slides>
-  
+    </div>
+
+
+<!-- show only on small screens -->
+
+  <div class="sm:hidden" > 
+
+
+
+<vueper-slides  :arrows="false" :fractions="false" progress :bulletsOutside="true" fixed-height="200px" :touchable="false"  
+
+@ready="logEvents('ready', $event)"
+@previous="logEvents('previous', $event)"
+@next="logEvents('next', $event)"
+@before-slide="logEvents('before-slide', $event)"
+@slide="logEvents('slide', $event)"
+
+>
+ <vueper-slide v-for="(slide, i) in slidesVueper"
+:key="i"
+
+
+> 
+<template #content> 
+      <div class="vueperslide__content-wrapper"  style="flex-direction: row">
+    <div > 
+
+
+        <img 
+          :key="i"
+          :src=slide.image
+          alt=""
+          class="object-contain"
+        />
+      </div>
+
+      </div>
+
+
+
+</template>
+</vueper-slide>
+
+</vueper-slides>
+</div>
+
   </div>
 
      <!-- V City (Explain ), Hacking Health,  Slide Bar (DSC), Hacking Agrifarm, Def Hacks (Def Hacks)  -->      <!-- Italic Text of what's been done -->

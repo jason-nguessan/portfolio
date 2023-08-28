@@ -69,12 +69,18 @@ export default{
 
 </script>
 
+<!-- 
 <template>
-    <div class="flex  flex-col lg:center-screen relative">
+    <div class="flex  flex-col lg:center-screen lg:relative lg:w-full  ">
         
-        <MenuTopRightTitle class="top-0 right-0 w-full absolute" title="Ventures" /> 
+        <MenuTopRightTitle class="mb-auto lg:top-0 lg:right-0 lg:absolute" title="Ventures" /> 
+
+
+        <div class="lg:inner-spacing bg-white"> 
+
+
         <div
-			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  w-11.5/12 mr-20 "
+			class="grid grid-cols-1 lg:grid-cols-3  lg:w-11.5/12  md:w-8/12 "
 		>
 			<ProjectSingle
 				v-for="project in projects"
@@ -82,7 +88,34 @@ export default{
 				:project="project"
 			/>
 		</div>
+                </div>
+
+
+    </div>
+              
+</template> -->
+
+
+<template>
+    <div class="flex  flex-col lg:center-screen lg:relative ">
         
+        <MenuTopRightTitle class="mb-auto lg:top-0 lg:right-0 lg:absolute" title="Ventures" /> 
+
+
+        <div class="lg:inner-spacing md:items-center md:flex md:flex-col  "> 
+
+
+        <div
+			class="grid grid-cols-1 sm:grid-cols-1 md:w-8/12 md:gap-10 lg:gap-0 items-center lg:grid-cols-3  lg:w-full "
+		>
+			<ProjectSingle
+				v-for="project in projects"
+				:key="project.id"
+				:project="project"
+			/>
+		</div>
+                </div>
+
 
     </div>
               

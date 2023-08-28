@@ -10,7 +10,7 @@ export default {
 	
 
 	
-<div class="rounded-xl shadow-lg hover:shadow-2xl  mb-10 sm:mb-0 flex flex-col dark:bg-ternary-dark">
+<div class="  rounded-xl shadow-lg hover:shadow-2xl  mb-10 sm:mb-0  dark:bg-ternary-dark sm:h-full overflow-hidden   " >
 
 	<a :href="project.href"  target="blank" class="h-full" :class="project.href != null ?  '' : 'disabled' ">
 		<p
@@ -37,7 +37,7 @@ export default {
 				:src="project.img"
 				:alt="project.title"
 			
-				class="w-12/12 bg-center  rounded-t-xl border-none"
+				class="w-12/12 bg-center rounded-t-xl border-none lg:h-full md:bg-contain  "
 			/>
 		</div>
 		<div class="text-center px-4 py-6">
@@ -62,6 +62,23 @@ export default {
 </template>
 
 <style scoped>
+
+.avatar {
+    /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+    
+    /* make a square container */
+    width: 400px;
+    height: 600px;
+
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+
+    /* center the image vertically and horizontally */
+    background-position: top center;
+
+    border-radius: 10%;
+
+}
 a.disabled {
   pointer-events: none;
   cursor: default;

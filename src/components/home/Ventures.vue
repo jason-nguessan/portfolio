@@ -18,8 +18,8 @@ export default{
 
                 proj0 : {
                 id: 0,
-		title: 'Lyricify',
-		category: 'An AI powered platform that allows casual users to translate their favourite songs into lyrics. ',
+		title: 'Leap',
+		category: 'A SaaS Product that pairs clients with coaches.',
 		img: Img_Lyricify,
             status: "In Progress"
                  },

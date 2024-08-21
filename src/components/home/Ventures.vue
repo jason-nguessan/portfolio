@@ -107,7 +107,7 @@ export default{
         <MenuTopRightTitle class="mb-auto lg:top-0 lg:right-0 lg:absolute" title="Ventures" /> 
 
 
-        <div class="lg:inner-spacing md:items-center md:flex md:flex-col  "> 
+        <div class="lg:inner-spacing md:items-center  "> 
 
 
         <div

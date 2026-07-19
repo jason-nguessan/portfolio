@@ -10,7 +10,7 @@ export default{
     data(){
      return  {
 
-        canDo: ['Getting your business in front of clients', 'Architecting & Developing a Most Viable Product', 'Scaling your application'],
+        canDo: [ 'Architecting & Developing a Viable Product', 'Scaling your applications', 'Achieving your technical vision',],
         count : 0,
      } 
        
@@ -57,7 +57,7 @@ export default{
                 <TopPartLeft  left="I am a " middle="Software Engineer" right="," /> 
                 <br>
 
-                <TopPartLeft left="and most Importantly " middle="Tech Entrepreneur" right="." /> 
+            <!--        <TopPartLeft left="and most Importantly " middle="Creator" right="." />   -->
                 <br>
                 <br>
                 
